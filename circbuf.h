@@ -22,7 +22,7 @@ typedef struct CircBuf {
     size_t size;      // Size of the buffer (number of total items)
     size_t item_size  // Size of each item (bytes)
     size_t num_items; // Current number of items
-};
+} CircBuf_t;
 
 // Enum for the circular buffer states
 enum buffer_states 
@@ -30,7 +30,7 @@ enum buffer_states
     EMPTY,
     PARTFILL,
     FULL
-};
+} buf_state;
 
 /* Function prototype Section */
 // Checks if the circular buffer is full. Returns 1 if full, otherwise returns 0.
