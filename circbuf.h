@@ -1,7 +1,7 @@
 /***************************************************************************
 *
-*  	Filename: circbuf.h
-*	  Description: Header file for circbuf.c
+*   Filename: circbuf.h
+*   Description: Header file for circbuf.c
 *                    
 *   Author: Dylan Way
 *       
@@ -9,13 +9,17 @@
 #ifndef _CIRCBUF_H
 #define _CIRCBUF_H
 
+/* Included libraries */
+#include <stdlib.h>
+
 /* Defines section */
 // Circular buffer definition from class lecture
 typedef struct CircBuf {
     void * buffer;    // Beginning of buffer in memory
+    void * buf_end;   // End of the buffer in memory
     void * head;      // Pointer to oldest
     void * tail;      // Pointer to newest
-    size_t size;      // Size of the buffer
+    size_t size;      // Size of the buffer (number of total items)
     size_t item_size  // Size of each item (bytes)
     size_t num_items; // Current number of items
 };
